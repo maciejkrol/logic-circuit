@@ -24,10 +24,10 @@ var nor1 = new Circuit.prototype.Elements.NorGate(),    //left top
     nor3 = new Circuit.prototype.Elements.NorGate(),    //middle
     nor4 = new Circuit.prototype.Elements.NorGate();    //right
 
-circuit.addElement(nor1);
-circuit.addElement(nor2);
-circuit.addElement(nor3);
-circuit.addElement(nor4);
+circuit.addElement(nor1)
+    .addElement(nor2)
+    .addElement(nor3)
+    .addElement(nor4);
 ```
 
 Let's register and name the input pins of the circuit. There will be two of them. I stick to the naming convention from the image. These are the "pins" which logic values can be freely changed, all other logic states are implied based on them.
@@ -39,24 +39,24 @@ circuit.createInputs(['A', 'B']);
 Now we must wire up the entire setup. The order in which you do this is arbitrary. In this case it's more legible to start from the output. Note the use of the circuit inputs ``A`` and ``B``.
 
 ```javascript
-nor4.bindInput(0, nor3.id());
-nor4.bindInput(1, nor3.id());
+nor4.bindInput(0, nor3.id())
+    .bindInput(1, nor3.id());
 
-nor3.bindInput(0, nor1.id());
-nor3.bindInput(1, nor2.id());
+nor3.bindInput(0, nor1.id())
+    .bindInput(1, nor2.id());
 
-nor2.bindInput(0, 'A');
-nor2.bindInput(1, 'A');
+nor2.bindInput(0, 'A')
+    .bindInput(1, 'A');
 
-nor1.bindInput(0, 'B');
-nor1.bindInput(1, 'B');
+nor1.bindInput(0, 'B')
+    .bindInput(1, 'B');
 
 ```
 Ok everything is pretty much ready. Just one last thing, we need to set the reference states of the inputs ``A`` and ``B``
 
 ```javascript
-circuit.setInput('A', false);
-circuit.setInput('B', true);
+circuit.setInput('A', false)
+    .setInput('B', true);
 ```
 
 To check the results run ``solve`` first and then use ``probe`` to check output values at any point of the circuit.
