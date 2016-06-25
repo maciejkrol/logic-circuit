@@ -65,3 +65,7 @@ To check the results run ``solve`` first and then use ``probe`` to check output 
 circuit.solve();
 var result = circuit.probe(nor4.id());
 ```
+
+## Examples
+
+Check the ``examples`` folder for more.
