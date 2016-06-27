@@ -1,0 +1,35 @@
+{
+  "name": "logic-circuit",
+  "version": "1.0.0",
+  "description": "This library let's you build a logic circuit using predefined gates and run a simulation to check the resulting logic outputs.",
+  "main": "./src/circuit.js",
+  "directories": {
+    "example": "examples"
+  },
+  "dependencies": {
+    "node-uuid": "^1.4.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaciejKrol/logic-circuit.git"
+  },
+  "keywords": [
+    "logic",
+    "circuit",
+    "gates",
+    "simulation"
+  ],
+  "author": {
+    "email": "mail@maciejkrol.pl",
+    "name": "Maciej Krol"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaciejKrol/logic-circuit/issues"
+  },
+  "homepage": "https://github.com/MaciejKrol/logic-circuit#readme"
+}
