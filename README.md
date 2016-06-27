@@ -2,6 +2,16 @@
 
 This library let's you build a logic circuit using predefined gates and run a simulation to check the resulting logic outputs.
 
+## Installation
+
+[![npm](https://img.shields.io/npm/v/logic-circuit.svg)](https://www.npmjs.com/package/logic-circuit)
+
+You can install the library using npm.
+
+```
+npm install logic-circuit
+```
+
 ## Basic usage
 
 It's best to explain using an example. Take a look at this sample logic circuit that we are going to implement. It's a NAND gate implemented using NOR gates.
